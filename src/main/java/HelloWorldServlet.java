@@ -8,16 +8,16 @@ import java.io.PrintWriter;
 
 
 @WebServlet(name = "HelloServlet", urlPatterns = "/hello")
-
 public class HelloWorldServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
+    private int counter = 0;
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
         out.println("<h1>Hello, World!</h1>");
+
+        counter +=1;
+        res.getWriter().println("<h1> the count is "+counter +".</h1>");
     }
 }
-
-
-
 
 
