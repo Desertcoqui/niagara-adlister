@@ -11,11 +11,11 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        body {
-            background-color: salmon;
-        }
-    </style>
+    <%--<style>--%>
+        <%--body {--%>
+            <%--background-color: lightseagreen;--%>
+        <%--}--%>
+    <%--</style>--%>
 </head>
 <body>
 <%@ include file="partials/navbar.jsp" %>
