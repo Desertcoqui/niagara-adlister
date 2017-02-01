@@ -28,11 +28,12 @@ public class JdbcAdsDao implements Ads{
             ResultSet resultSet = statement.executeQuery(sql);
 
             while (resultSet.next()){
-                int id = resultSet.getInt("id");
+                long id = resultSet.getInt("id");
+                long userId = resultSet.getInt("id");
                 String title = resultSet.getString("title");
                 String description = resultSet.getString("description");
 
-                Ad ad = new Ad(id, title, description);
+                Ad ad = new Ad(id, userId, title, description);
             }
 
 
